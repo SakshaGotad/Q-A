@@ -24,7 +24,7 @@ const AnswerQuery = () => {
   const submitAns =async(e)=>{
     e.preventDefault();
     try {
-      let answering = await fetch(`http://localhost:5001/ans/answering`,{
+      let answering = await fetch(`https://q-a-e2s5.onrender.com/ans/answering`,{
         method:"POST",
         body:JSON.stringify({queryId,answer,name, email, userId}),
         headers:{
@@ -46,7 +46,7 @@ const AnswerQuery = () => {
 
   const fetchAnswers = async () => {
     try {
-      const response = await fetch(`http://localhost:5001/ans/answers/${id}`,
+      const response = await fetch(`https://q-a-e2s5.onrender.com/ans/answers/${id}`,
         {
           method:"GET",
           
@@ -62,7 +62,7 @@ const AnswerQuery = () => {
   
 
   const fetchQuery = async()=>{
-       await fetch(`http://localhost:5001/query/query/${id}`)
+       await fetch(`https://q-a-e2s5.onrender.com/query/query/${id}`)
       .then((resp)=> resp.json())
       .then((data)=> setData(data)
       ).catch((Error)=>{

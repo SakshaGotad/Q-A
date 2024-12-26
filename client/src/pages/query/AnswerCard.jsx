@@ -19,7 +19,7 @@ const AnswerCard = ({ name, email, answer, id, fetchAnswerFun, userId }) => {
     try {
         const yes = window.confirm("Are you sure want to delete ?")
        if(yes){
-        const deleteQuery =  await fetch(`http://localhost:5001/ans/delete-answer/${id}`,{
+        const deleteQuery =  await fetch(`https://q-a-e2s5.onrender.com/ans/delete-answer/${id}`,{
             method:"DELETE",
             headers:{
                 "Content-Type":"application/json"
@@ -43,7 +43,7 @@ const AnswerCard = ({ name, email, answer, id, fetchAnswerFun, userId }) => {
     try {
         const yes = window.confirm(" Are you sure want to Update ?")
     if(yes){
-        let update = await fetch(`http://localhost:5001/ans/edit-answer/${id}`,
+        let update = await fetch(`https://q-a-e2s5.onrender.com/ans/edit-answer/${id}`,
             {
                 method:"PUT",
                 body:JSON.stringify({answer:newAns}),

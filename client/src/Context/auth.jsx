@@ -36,7 +36,7 @@ const getUserData = async()=>{
         
             console.log(token)
         
-        const response = await fetch(`http://localhost:5001/user/userdata`,{
+        const response = await fetch(`https://q-a-e2s5.onrender.com/user/userdata`,{
             method:'GET',
             headers:{
                 "Authorization":`Bearer ${token}`

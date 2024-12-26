@@ -11,7 +11,7 @@ const Yourquery = () => {
 
   const Yourqueries = async () => {
     try {
-      const response = await fetch(`http://localhost:5001/query/yours-query`, {
+      const response = await fetch(`https://q-a-e2s5.onrender.com/query/yours-query`, {
         method: 'POST',
         body: JSON.stringify({ userId }),
         headers: {

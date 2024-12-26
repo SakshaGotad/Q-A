@@ -23,7 +23,7 @@ const Register = () => {
   e.preventDefault();
   try {
     
-    const response = await fetch(`http://localhost:5001/user/register`,{
+    const response = await fetch(`https://q-a-e2s5.onrender.com/user/register`,{
       method:"POST",
       headers:{"Content-Type": "application/json",
 

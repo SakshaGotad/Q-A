@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     const fetchQueries = async () => {
       try {
-        const response = await fetch('http://localhost:5001/query/all-queries');
+        const response = await fetch('https://q-a-e2s5.onrender.com/query/all-queries');
         const data = await response.json();
         setQueries(data);  // Store data in state
       } catch (error) {

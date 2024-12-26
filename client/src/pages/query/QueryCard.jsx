@@ -14,7 +14,7 @@ const QueryCard = ({ query, name, tags, title, email, YoursQuery,yourQueriesFun,
     // Implement the delete functionality here
     try {
       console.log(_id)
-     await fetch(`http://localhost:5001/query/delete-query/${_id}`,
+     await fetch(`https://q-a-e2s5.onrender.com/query/delete-query/${_id}`,
       {
         method:"DELETE",
         headers:{
@@ -33,7 +33,7 @@ toast.success("Query Deleted successfully")
     // Implement the update functionality here
     try {
       console.log(_id)
-      const response = await fetch(`http://localhost:5001/query/update-query/${_id}`,
+      const response = await fetch(`https://q-a-e2s5.onrender.com/query/update-query/${_id}`,
         {
           method:"PUT",
           headers:{

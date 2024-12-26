@@ -42,7 +42,7 @@ const Addquery = () => {
     const handleSubmit= async(e)=>{
       e.preventDefault();
       try {
-        const response = await fetch(`http://localhost:5001/query/create-query`,
+        const response = await fetch(`https://q-a-e2s5.onrender.com/query/create-query`,
           {
             method:"POST",
             headers:{
