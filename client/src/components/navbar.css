@@ -1,0 +1,139 @@
+/* Container for navbar content */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 0 auto;
+    max-width: 1240px;
+  }
+  
+  /* Header style */
+  header {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 72px;
+    margin-bottom: 50px;
+  }
+  
+  /* Navbar logo */
+  .logo {
+    color: rgb(41, 70, 99);
+    font-weight: 300;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  /* Nav links container */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 3.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Individual nav links */
+  .nav-links li {
+    text-decoration: none;
+    padding: 8px 16px;
+  }
+  
+  /* Navbar link style */
+  .navbar-link {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: brown;
+    transition: color 0.3s;
+  }
+  
+  /* Hover effect for navbar links */
+  .navbar-link:hover {
+    color: #ff6347;
+  }
+  
+  /* Mobile Menu (Hamburger) styles */
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .menu-icon .bar {
+    width: 30px;
+    height: 3px;
+    background-color: brown;
+    border-radius: 5px;
+  }
+  
+  .nav-links.active {
+    display: block;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    z-index: 10;
+    width: 100%;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Optional shadow for mobile */
+  }
+  
+  .nav-links.active li {
+    padding: 15px;
+  }
+  
+  /* Responsive Design - Mobile view */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 1.5rem;
+      position: absolute;
+      top: 72px;
+      right: 0;
+      left: 0;
+      background-color: white;
+      padding: 20px;
+      width: 100%;
+      z-index: 10;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  
+    .menu-icon {
+      display: flex;
+    }
+    
+    /* Show nav links when menu is active */
+    .nav-links.active {
+      display: flex;
+      opacity: 1;
+    }
+  
+    .navbar-link {
+      font-size: 16px;
+    }
+  
+    .logo {
+      font-size: 24px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar-link {
+      font-size: 14px;
+    }
+  
+    .logo {
+      font-size: 20px;
+    }
+  
+    /* Optional: Improve hamburger icon size for smaller screens */
+    .menu-icon .bar {
+      width: 25px;
+    }
+  }
+  

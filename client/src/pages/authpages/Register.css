@@ -1,0 +1,94 @@
+/* Register.css */
+
+.auth-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .auth-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #444;
+    margin-bottom: 25px;
+    font-weight: 600;
+  }
+  
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 6px;
+  }
+  
+  .form-input {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: #28a745;
+  }
+  
+  .btn {
+    padding: 14px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Footer for "Already have an account?" link */
+  .auth-footer {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .auth-footer p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .auth-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .auth-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  .auth-link:focus {
+    outline: none;
+  }
+  

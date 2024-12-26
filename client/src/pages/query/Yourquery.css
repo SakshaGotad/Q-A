@@ -1,0 +1,55 @@
+/* Yourquery Container - Centering Cards Vertically */
+.your-query-container {
+  display: flex;
+  flex-direction: column; /* This will make the cards stacked vertically */
+  align-items: center;    /* This will center the cards horizontally */
+  width: 100%;
+  margin-top: 20px; /* Adds some space from the top */
+}
+
+/* Styling the "No queries" message */
+.no-queries-message {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff6347; /* Tomato color */
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #fff3cd;
+  border-radius: 8px;
+  border: 2px solid #ffb400;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+  transition: transform 0.3s ease, opacity 0.5s ease;
+  animation: shake 0.6s ease-in-out infinite;
+}
+
+/* Shake animation for "No queries" message */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Add spacing around the query cards container */
+.query-card-container {
+  display: flex;
+  flex-direction: column; /* Stack the cards vertically */
+  justify-content: flex-start; /* Align cards to the top */
+  gap: 20px; /* Add space between the cards */
+  width: 100%;
+  align-items: center; /* Ensure the cards are centered horizontally */
+}

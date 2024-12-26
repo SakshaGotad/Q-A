@@ -1,0 +1,79 @@
+/* General page container */
+.answer-page-container {
+    padding: 20px;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  /* Query card container styling */
+  .answer-card-container {
+    margin-top: 20px;
+  }
+  
+  /* Form container below the QueryCard */
+  .answer-form-container {
+    margin-top: 30px;
+    background-color: #f3f2e4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%;
+  }
+  
+  .answer-form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Form label styling */
+  .form-label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+  }
+  
+  /* Textarea styling */
+  .form-textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    width: 100%;
+    resize: vertical;
+    min-height: 150px;
+    margin-bottom: 20px;
+    background-color: #f9fafb;
+    color: #333;
+  }
+  
+  .form-textarea:focus {
+    outline: none;
+    border-color: #3182ce;
+    box-shadow: 0 0 8px rgba(50, 168, 182, 0.4);
+  }
+  
+  /* Submit button styling */
+  .submit-button {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #2b6cb0;
+  }
+  
+  /* Add padding and margins for form groups */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  

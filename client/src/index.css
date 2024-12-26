@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+    font-family: Urbanist, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    
+  }
+
+
+ 
+  .container {
+    max-width: 140rem;
+    padding: 4rem 2.4rem;
+    margin: 0 auto;
+  }
+  li {
+    list-style: none;
+  }
+
+

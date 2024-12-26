@@ -1,0 +1,139 @@
+/* Global Reset to prevent horizontal scrolling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden; /* Disable horizontal scrolling */
+}
+
+.home-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow within container */
+}
+
+.home-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  word-wrap: break-word; /* Prevent long words from breaking layout */
+  width: 100%;
+}
+
+.query-list {
+  display: flex;
+  flex-direction: column;  /* Stacked list of cards */
+  align-items: center;
+  width: 100%;
+  gap: 20px;  /* Add space between cards */
+}
+
+.query-list p {
+  color: #777;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Styling for 'No queries found' message */
+.no-queries-message {
+  font-size: 20px;  /* Reduce font size for smaller screens */
+  font-weight: bold;
+  color: #ff6347; /* Tomato color */
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #fff3cd;
+  border-radius: 8px;
+  border: 2px solid #ffb400;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+  transition: transform 0.3s ease, opacity 0.5s ease;
+  animation: shake 0.6s ease-in-out infinite;
+}
+
+/* Shake animation */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .query-list {
+    gap: 15px; /* Reduce gap between cards */
+    width: 100%; /* Ensure the query list takes full width */
+  }
+
+  /* Adjust card size for mobile devices */
+  .query-list > .query-card {
+    width: 100%; /* Full width for cards on mobile */
+    font-size: 14px;  /* Smaller font size */
+    padding: 10px;  /* Reduced padding */
+  }
+
+  .no-queries-message {
+    font-size: 18px;  /* Slightly smaller for mobile */
+    padding: 15px;
+    width: 90%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .query-list {
+    gap: 10px;  /* Smaller gap between cards on very small screens */
+    width: 100%; /* Ensure the query list takes full width */
+  }
+
+  .query-list > .query-card {
+    width: 100%; /* Full width for cards */
+    font-size: 12px;  /* Smaller font size for small screens */
+    padding: 8px;  /* Smaller padding */
+  }
+
+  .no-queries-message {
+    font-size: 16px;
+    padding: 10px;
+    width: 95%;
+    max-width: 400px;
+  }
+
+  .home-container {
+    padding: 15px;
+  }
+}
