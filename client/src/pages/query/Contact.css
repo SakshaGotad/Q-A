@@ -1,0 +1,61 @@
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .left-side {
+    width: 30%;
+    text-align: center;
+  }
+  
+  .profile-photo {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social-icon {
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .social-icon:hover {
+    color: #0073b1; /* Customize this color for hover effect */
+  }
+  
+  .right-side {
+    width: 65%;
+  }
+  
+  .right-side h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .right-side p, .right-side ul {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .right-side ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .right-side ul li {
+    margin: 5px 0;
+  }
+  
