@@ -8,7 +8,7 @@ const userRoutes = require('./routes/user-routes');
 const queryRoutes = require('./routes/query-routes');
 const answerRoutes = require('./routes/answer-routes');
 app.use(cors({
-    origin: 'http://localhost:5173', 
+    origin: 'https://superlative-fairy-626ab3.netlify.app', 
   credentials: true,
 }));
 app.use(express.json());
