@@ -7,7 +7,7 @@ import toast from 'react-hot-toast';
 const AnswerCard = ({ name, email, answer, id, fetchAnswerFun, userId }) => {
   const { user } = useAuth();
   const [showModal, setShowModal] = useState(false);
-//   const [updatedAnswer, setUpdatedAnswer] = useState(answer);
+
   const [newAns, setNewAns] = useState(answer);
 
   const handleUpdateClick = () => {
@@ -15,7 +15,7 @@ const AnswerCard = ({ name, email, answer, id, fetchAnswerFun, userId }) => {
   };
 
   const handleDeleteClick = async() => {
-     // Your delete logic here
+     
     try {
         const yes = window.confirm("Are you sure want to delete ?")
        if(yes){
@@ -39,7 +39,7 @@ const AnswerCard = ({ name, email, answer, id, fetchAnswerFun, userId }) => {
   };
 
   const handleUpdateAnswer = async() => {
-    // Handle answer update API request here
+    
     try {
         const yes = window.confirm(" Are you sure want to Update ?")
     if(yes){
@@ -58,7 +58,7 @@ const AnswerCard = ({ name, email, answer, id, fetchAnswerFun, userId }) => {
     }
     // console.log("Updated Answer:", updatedAnswer);
     setShowModal(false);
-    // fetchAnswerFun();
+    
     } catch (error) {
         console.log(error);
     }

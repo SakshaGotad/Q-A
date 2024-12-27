@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaHeart } from 'react-icons/fa';
 import { FiEdit } from 'react-icons/fi';
 import { AiTwotoneDelete } from 'react-icons/ai';
-import './QueryCard.css';  // Assuming the CSS will be in this file
+import './QueryCard.css';  
 import { toast } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 
@@ -11,26 +11,31 @@ const QueryCard = ({ query, name, tags, title, email, YoursQuery,yourQueriesFun,
   const [updateQuery , setUpdatedQuery] = useState(query);
 
   const handleDeleteQuery = async() => {
-    // Implement the delete functionality here
+    
+
     try {
-      console.log(_id)
-     await fetch(`https://q-a-e2s5.onrender.com/query/delete-query/${_id}`,
-      {
-        method:"DELETE",
-        headers:{
-          "Content-Type":"application/json"
-        }
+      const yes = window.confirm(" Are you sure want to delete ?")
+      if(yes){
+        await fetch(`https://q-a-e2s5.onrender.com/query/delete-query/${_id}`,
+          {
+            method:"DELETE",
+            headers:{
+              "Content-Type":"application/json"
+            }
+          }
+         )
       }
-     )
+     
+    
      yourQueriesFun() 
-toast.success("Query Deleted successfully")
+     toast.success("Query Deleted")
     } catch (error) {
       console.log(error);
     }
   };
 
   const handleUpdateQuery = async() => {
-    // Implement the update functionality here
+    
     try {
       console.log(_id)
       const response = await fetch(`https://q-a-e2s5.onrender.com/query/update-query/${_id}`,
@@ -74,9 +79,7 @@ toast.success("Query Deleted successfully")
 
 
       <div className="query-card-footer">
-        {/* <button className="like-btn">
-          <FaHeart />
-        </button> */}
+        
 
         {YoursQuery && (
           <>

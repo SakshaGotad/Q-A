@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import QueryCard from './QueryCard';
-import './Home.css'; // Import home page styling
+import './Home.css'; 
 
 const Home = () => {
   const [queries, setQueries] = useState([]);
 
-  // Fetch data from API
+  
   useEffect(() => {
     const fetchQueries = async () => {
       try {
         const response = await fetch('https://q-a-e2s5.onrender.com/query/all-queries');
         const data = await response.json();
-        setQueries(data);  // Store data in state
+        setQueries(data);  
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -27,7 +27,7 @@ const Home = () => {
         {queries.length > 0 ? (
           queries.map((queryItem) => (
             <QueryCard
-              key={queryItem._id} // Assuming each query has a unique _id
+              key={queryItem._id} 
               title={queryItem.title}
               email={queryItem.email}
               query={queryItem.query}

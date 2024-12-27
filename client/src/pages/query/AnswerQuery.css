@@ -1,79 +1,125 @@
-/* General page container */
 .answer-page-container {
-    padding: 20px;
-   
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-  }
-  
-  /* Query card container styling */
-  .answer-card-container {
-    margin-top: 20px;
-  }
-  
-  /* Form container below the QueryCard */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.answer-card-container {
+  margin-top: 20px;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.answer-form-container {
+  margin-top: 30px;
+  background-color: #f3f2e4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 50%;
+}
+
+@media (max-width: 768px) {
   .answer-form-container {
-    margin-top: 30px;
-    background-color: #f3f2e4;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 50%;
+    width: 90%;
+    padding: 15px;
   }
-  
-  .answer-form-container form {
-    display: flex;
-    flex-direction: column;
+}
+
+.form-label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.form-textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  width: 100%;
+  resize: vertical;
+  min-height: 150px;
+  margin-bottom: 20px;
+  background-color: #f9fafb;
+  color: #333;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 8px rgba(50, 168, 182, 0.4);
+}
+
+.submit-button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #2b6cb0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .answer-card-container {
+    padding: 0 5px;
   }
-  
-  /* Form label styling */
+}
+
+@media (max-width: 768px) {
+  .answer-page-container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
   .form-label {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #333333;
-    margin-bottom: 10px;
-  }
-  
-  /* Textarea styling */
-  .form-textarea {
-    padding: 12px;
     font-size: 1rem;
-    border-radius: 6px;
-    border: 1px solid #ddd;
-    width: 100%;
-    resize: vertical;
-    min-height: 150px;
-    margin-bottom: 20px;
-    background-color: #f9fafb;
-    color: #333;
   }
-  
-  .form-textarea:focus {
-    outline: none;
-    border-color: #3182ce;
-    box-shadow: 0 0 8px rgba(50, 168, 182, 0.4);
+
+  .form-textarea {
+    font-size: 0.9rem;
   }
-  
-  /* Submit button styling */
+
   .submit-button {
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    background-color: #3182ce;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 1rem;
   }
-  
-  .submit-button:hover {
-    background-color: #2b6cb0;
+}
+
+@media (max-width: 480px) {
+  .answer-form-container {
+    width: 100%;
+    padding: 10px;
   }
-  
-  /* Add padding and margins for form groups */
-  .form-group {
-    margin-bottom: 20px;
+
+  .form-textarea {
+    font-size: 0.9rem;
+    min-height: 120px;
   }
-  
+
+  .submit-button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .answer-page-container {
+    padding: 10px;
+  }
+
+  .answer-card-container {
+    padding: 0 5px;
+  }
+}

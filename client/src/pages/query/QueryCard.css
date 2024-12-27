@@ -1,28 +1,29 @@
-/* General styles for the query card */
 .query-card {
   position: relative;
-  background-color: #4f87f5; /* Gradient blue background */
+  background-color: #4f87f5;
   border-radius: 16px;
   box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.12);
   margin: 20px 0;
   width: 100%;
-  max-width: 900px; /* Slightly smaller max width */
+  max-width: 900px;
   height: auto;
   padding: 25px;
-  color: #141362; /* White text for better contrast */
+  color: #141362;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
-  background: linear-gradient(145deg, #81a2e4, #0e38b5); /* Gradient effect */
-  text-decoration: none; /* Remove underline from all text */
-  box-sizing: border-box; /* Ensures padding and border are included in the element's total width/height */
+  background: linear-gradient(145deg, #81a2e4, #0e38b5);
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
 }
 
 .query-card:hover {
-  transform: translateY(-10px); /* Hover effect */
+  transform: translateY(-10px);
   box-shadow: 0px 20px 45px rgba(0, 0, 0, 0.18);
 }
 
-/* Header */
 .query-card-header {
   margin-bottom: 20px;
 }
@@ -35,7 +36,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: left;
-  text-decoration: none; /* Ensures no underline */
+  text-decoration: none;
 }
 
 .query-card-user {
@@ -45,7 +46,7 @@
 
 .query-card-user-name {
   font-size: 18px;
-  color: #3d0b71; /* Lighter text for name */
+  color: #3d0b71;
   font-weight: 500;
 }
 
@@ -55,29 +56,27 @@
   font-weight: 300;
 }
 
-/* Query content styling with improved specificity */
 .query-card .query-card-content {
   font-size: 20px;
-  color: #161422; /* Light grey text for query */
+  color: #161422;
   line-height: 1.7;
   text-align: left;
   margin-bottom: 25px;
 }
 
-/* Tags */
 .query-card-tags {
   margin-top: 10px;
-  position: absolute;  /* Position it absolutely within the query card */
-  bottom: 10px;        /* Adjust to move it closer to the bottom */
-  right: 10px;          /* Adjust to position it to the left */
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
 .query-card-tag {
-  background-color: rgba(255, 255, 255, 0.3); /* Soft white background with transparency */
-  color: #152f7f; /* Vibrant blue color for tags */
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #152f7f;
   padding: 8px 15px;
   border-radius: 20px;
   font-size: 14px;
@@ -87,19 +86,17 @@
 }
 
 .query-card-tag:hover {
-  background-color: #f39c12; /* Golden hover effect */
+  background-color: #f39c12;
   color: #ffffff;
 }
 
-/* Footer with action buttons */
 .query-card-footer {
   display: flex;
-  justify-content: flex-start;  /* Align items to the left */
+  justify-content: flex-start;
   align-items: center;
-  gap: 15px; /* Space between buttons */
+  gap: 15px;
 }
 
-/* Button styles for like, edit, and delete */
 .like-btn, .edit-btn, .delete-btn {
   background: transparent;
   border: none;
@@ -111,10 +108,9 @@
 }
 
 .edit-btn:hover, .delete-btn:hover {
-  color: #f39c12; /* Hover effect */
+  color: #f39c12;
 }
 
-/* Modal styling for updating query */
 .update-modal {
   display: none;
   position: fixed;
@@ -173,52 +169,50 @@
   background-color: #3a61d4;
 }
 
-/* Media Queries for Mobile and Tablet */
 @media (max-width: 768px) {
   .query-card {
     padding: 15px;
     margin: 10px;
-    width: 100%;  /* Ensure the card takes up the full width */
-    box-sizing: border-box; /* Prevent content overflow */
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .query-card-title {
-    font-size: 24px;  /* Smaller title font on mobile */
+    font-size: 24px;
   }
 
   .query-card-content {
-    font-size: 16px;  /* Reduce the font size for better readability */
+    font-size: 16px;
     margin-bottom: 15px;
   }
 
   .query-card-user-name, .query-card-user-email {
-    font-size: 14px; /* Smaller text for user details */
+    font-size: 14px;
   }
 
   .query-card-tags {
-    position: relative;  /* Remove absolute positioning for better mobile layout */
+    position: relative;
     bottom: auto;
     right: auto;
-    margin-top: 20px; /* Add margin for spacing */
+    margin-top: 20px;
   }
 
   .query-card-tag {
     font-size: 12px;
-    padding: 5px 10px;  /* Adjust padding for smaller screen sizes */
+    padding: 5px 10px;
   }
 
   .query-card-footer {
-    flex-direction: column; /* Stack action buttons vertically on mobile */
-    gap: 10px; /* Increase space between buttons */
+    flex-direction: column;
+    gap: 10px;
   }
 
   .like-btn, .edit-btn, .delete-btn {
-    font-size: 20px;  /* Smaller icon size for mobile */
+    font-size: 20px;
   }
 
-  /* Modal adjustments */
   .update-modal-content {
-    padding: 15px;  /* Adjust padding inside the modal for smaller screens */
+    padding: 15px;
     max-width: 100%;
   }
 
@@ -231,34 +225,33 @@
   }
 
   .modal-actions {
-    flex-direction: column; /* Stack modal action buttons vertically */
+    flex-direction: column;
     gap: 10px;
   }
 
   .modal-update-btn, .modal-close-btn {
-    width: 100%; /* Make buttons take up full width on smaller screens */
+    width: 100%;
   }
 }
 
-/* For extra small screens (phones) */
 @media (max-width: 480px) {
   .query-card {
-    padding: 10px;  /* Reduce padding for smaller screens */
+    padding: 10px;
   }
 
   .query-card-title {
-    font-size: 20px;  /* Even smaller title font */
+    font-size: 20px;
   }
 
   .query-card-content {
-    font-size: 14px; /* Reduce content font size further */
+    font-size: 14px;
   }
 
   .query-card-footer {
-    gap: 8px; /* Smaller gap between buttons */
+    gap: 8px;
   }
 
   .modal-update-btn, .modal-close-btn {
-    padding: 8px 15px; /* Smaller button size */
+    padding: 8px 15px;
   }
 }

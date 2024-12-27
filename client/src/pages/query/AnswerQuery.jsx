@@ -53,8 +53,8 @@ const AnswerQuery = () => {
         }
       );
       const ansq = await response.json();
-      console.log('Fetched Answers:', ansq); // Log the data to check
-      setAnsData(ansq); // This will update the state with the new answer data
+      console.log('Fetched Answers:', ansq); 
+      setAnsData(ansq); 
     } catch (error) {
       console.log('Error fetching answers:', error);
     }

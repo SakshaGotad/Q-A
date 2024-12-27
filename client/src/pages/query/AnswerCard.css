@@ -1,25 +1,22 @@
-/* General styling for the answer card */
 .answer-card {
-  background-color: #ced5f0; /* Light background */
+  background-color: #ced5f0;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   margin-bottom: 20px;
-  border-left: 5px solid #4C9F70; /* Green accent */
+  border-left: 5px solid #4C9F70;
   display: flex;
   flex-direction: column;
-  width: 100%; /* Ensure the card is responsive */
-  max-width: 800px; /* Max width for larger screens */
+  width: 100%;
+  max-width: 800px;
 }
 
-/* Hover effect */
 .answer-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Header styling */
 .answer-card-header {
   display: flex;
   justify-content: space-between;
@@ -28,7 +25,7 @@
 }
 
 .answer-card-title {
-  font-size: 1.2rem; /* Adjusted for smaller screens */
+  font-size: 1.2rem;
   font-weight: 600;
   color: #333333;
 }
@@ -39,7 +36,6 @@
   margin-top: 4px;
 }
 
-/* Action buttons for edit and delete */
 .answer-card-actions {
   display: flex;
   gap: 12px;
@@ -54,7 +50,6 @@
   transition: transform 0.3s ease;
 }
 
-/* Edit button styling */
 .edit-btn {
   color: #4C9F70;
 }
@@ -64,7 +59,6 @@
   color: #388E60;
 }
 
-/* Delete button styling */
 .delete-btn {
   color: #E53E3E;
 }
@@ -74,7 +68,6 @@
   color: #C53030;
 }
 
-/* Content section */
 .answer-card-content {
   color: #4A5568;
   font-size: 1.1rem;
@@ -82,7 +75,6 @@
   margin-top: 10px;
 }
 
-/* Modal overlay */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -96,24 +88,21 @@
   z-index: 999;
 }
 
-/* Modal content */
 .modal-content {
   background-color: #f7fafc;
   padding: 24px;
   border-radius: 10px;
   width: 100%;
-  max-width: 500px; /* Smaller max-width for mobile */
+  max-width: 500px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Modal title */
 .modal-title {
   font-size: 1.3rem;
   font-weight: 600;
   color: #2D3748;
 }
 
-/* Textarea */
 .textarea {
   background-color: #edf2f7;
   color: #2D3748;
@@ -126,7 +115,6 @@
   min-height: 120px;
 }
 
-/* Modal actions buttons */
 .modal-actions {
   display: flex;
   justify-content: flex-end;
@@ -134,7 +122,6 @@
   margin-top: 16px;
 }
 
-/* Update button styling */
 .update-btn {
   background-color: #38B2AC;
   color: white;
@@ -147,7 +134,6 @@
   background-color: #319795;
 }
 
-/* Close button styling */
 .close-btn {
   background-color: #E2E8F0;
   color: #4A5568;
@@ -160,54 +146,44 @@
   background-color: #CBD5E0;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
-  /* Adjust the width of the answer card */
   .answer-card {
     width: 90%;
-    max-width: 100%; /* Allow card to take full width on small screens */
-    padding: 16px; /* Reduced padding for mobile */
+    max-width: 100%;
+    padding: 16px;
   }
 
-  /* Adjust font size for title */
   .answer-card-title {
     font-size: 1.1rem;
   }
 
-  /* Adjust font size for email */
   .answer-card-email {
     font-size: 0.9rem;
   }
 
-  /* Adjust font size for answer content */
   .answer-card-content {
     font-size: 1rem;
   }
 
-  /* Adjust button size */
   .edit-btn,
   .delete-btn {
     font-size: 1.2rem;
   }
 
-  /* Adjust modal size */
   .modal-content {
     width: 90%;
-    max-width: 400px; /* Make modal smaller on mobile */
+    max-width: 400px;
   }
 
-  /* Textarea font size and padding */
   .textarea {
-    font-size: 0.9rem; /* Smaller font for mobile */
+    font-size: 0.9rem;
     padding: 10px;
   }
 
-  /* Adjust modal action buttons */
   .modal-actions {
     gap: 12px;
   }
 
-  /* Adjust button sizes for mobile */
   .update-btn,
   .close-btn {
     padding: 8px 16px;
@@ -215,7 +191,6 @@
 }
 
 @media (max-width: 480px) {
-  /* Further reduce font sizes for very small screens */
   .answer-card-title {
     font-size: 1rem;
   }

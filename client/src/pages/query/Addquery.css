@@ -65,7 +65,7 @@ button:hover {
     background-color: #45a049;
 }
 
-/* Mobile responsive - Stacks the banner and form vertically on smaller screens */
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useAuth } from '../../Context/auth';  // Assuming your auth context is set up
+import { useAuth } from '../../Context/auth';  
 import QueryCard from './QueryCard';
 import './Yourquery.css';
 
 const Yourquery = () => {
-  const { user } = useAuth();  // Assuming user info is available via useAuth
+  const { user } = useAuth();  
   const userId = user._id;
   const [data, setData] = useState([]);
   console.log(data);
